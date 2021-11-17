@@ -5,6 +5,8 @@ import {
   PortableText,
 } from '../../lib/sanity'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
+import imageLoader from '../../imageLoader'
 const recipesQuery = `*[_type =='recipe' && slug.current==$slug][0]{
  _id,
  name,
@@ -32,7 +34,15 @@ export default function OneRecipe({ data }) {
     <article className='container'>
       <h1 className='recipe__title'>{recipe.name}</h1>
       <main className='recipe_detail'>
-        <img src={urlFor(recipe.mainImage).url()} alt={recipe.name} />
+        {/* <img src={urlFor(recipe.mainImage).url()} alt={recipe.name} /> */}
+        <Image
+          src={urlFor(recipe.mainImage).url()}
+          loader={imageLoader}
+          unoptimized
+          alt={recipe.name}
+          width='1000'
+          height='800'
+        />
         <div className=''>
           <h3>Ingredients:</h3>
           <ul>
