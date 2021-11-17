@@ -25,7 +25,7 @@ const recipesQuery = `*[_type =='recipe' && slug.current==$slug][0]{
 }`
 
 export default function OneRecipe({ data }) {
-  const { recipe } = data
+  const { recipe } = data ? data : []
   const router = useRouter()
   if (router.isFallback) {
     return <div>Loading...</div>
