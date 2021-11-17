@@ -20,7 +20,7 @@ export default function Home({ recipes }) {
         <meta name='description' content='This is a online juice center' />
         <link rel='icon' href='/chef.png' />
       </Head>
-      <h1>Welcome to Alex's kitchen</h1>
+      <h1>Welcome to the kitchen of Alex</h1>
 
       <ul className='recipes-list'>
         {recipes?.length > 0 &&
