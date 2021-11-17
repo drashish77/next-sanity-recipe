@@ -81,5 +81,6 @@ export async function getStaticProps({ params }) {
   const recipe = await sanityClient.fetch(recipesQuery, { slug })
   return {
     props: { data: { recipe } }, // will be passed to the page component as props
+    revalidate: 10,
   }
 }
