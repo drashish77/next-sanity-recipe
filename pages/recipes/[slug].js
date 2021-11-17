@@ -32,7 +32,7 @@ export default function OneRecipe({ data }) {
     <article className='container'>
       <h1 className='recipe__title'>{recipe.name}</h1>
       <main className='recipe_detail'>
-        <img src={urlFor(recipe.mainImage).url()} alt='' />
+        <img src={urlFor(recipe.mainImage).url()} alt={recipe.name} />
         <div className=''>
           <h3>Ingredients:</h3>
           <ul>
@@ -48,11 +48,6 @@ export default function OneRecipe({ data }) {
           <h3>instructions:</h3>
           <PortableText blocks={recipe?.instructions} />
         </div>
-        {/* <ul>
-            {recipe.ingredient.map((item) => (
-              <li key={Math.random()}>{item.instructions.name}</li>
-            ))}
-          </ul> */}
       </main>
     </article>
   )

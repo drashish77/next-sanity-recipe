@@ -14,7 +14,7 @@ export default function Home({ recipes }) {
   return (
     <div className='container'>
       <Head>
-        <title>Alex's Kitchen</title>
+        <title>Alex Kitchen</title>
         <meta name='description' content='This is a online juice center' />
         <link rel='icon' href='/chef.png' />
       </Head>
